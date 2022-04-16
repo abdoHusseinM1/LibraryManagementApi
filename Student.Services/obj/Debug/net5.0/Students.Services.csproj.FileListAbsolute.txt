@@ -1,0 +1,15 @@
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\Students.Services.deps.json
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\Students.Services.dll
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\ref\Students.Services.dll
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\Students.Services.pdb
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\Students.Data.dll
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Debug\net5.0\Students.Data.pdb
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.csproj.AssemblyReference.cache
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.AssemblyInfoInputs.cache
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.AssemblyInfo.cs
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.csproj.CoreCompileInputs.cache
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.csproj.CopyComplete
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.dll
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\ref\Students.Services.dll
+C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Debug\net5.0\Students.Services.pdb

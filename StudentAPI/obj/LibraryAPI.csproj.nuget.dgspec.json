@@ -1,0 +1,296 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gamma\\source\\repos\\StudentAPI\\StudentAPI\\LibraryAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj",
+        "projectName": "Repos_Interfaces",
+        "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj",
+        "packagesPath": "C:\\Users\\gamma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gamma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gamma\\source\\repos\\StudentAPI\\StudentAPI\\LibraryAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\StudentAPI\\LibraryAPI.csproj",
+        "projectName": "LibraryAPI",
+        "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\StudentAPI\\LibraryAPI.csproj",
+        "packagesPath": "C:\\Users\\gamma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\StudentAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gamma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj"
+              },
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj"
+              },
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\Repos_Implementation.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\Repos_Implementation.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\gamma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gamma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\Repos_Implementation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\Repos_Implementation.csproj",
+        "projectName": "Repos_Implementation",
+        "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\Repos_Implementation.csproj",
+        "packagesPath": "C:\\Users\\gamma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Repo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gamma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Student.Services\\Repos_Interfaces.csproj"
+              },
+              "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\gamma\\source\\repos\\StudentAPI\\Students.Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

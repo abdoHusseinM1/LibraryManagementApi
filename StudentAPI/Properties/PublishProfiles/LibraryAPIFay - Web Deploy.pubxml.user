@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEVqCWTV4SkOoN5JsO/25HQAAAAACAAAAAAAQZgAAAAEAACAAAAC1TlYGWB7xcwfhsX0Vx1cgmbGJsuA52FG8+hIA6zcwlwAAAAAOgAAAAAIAACAAAAAzqFsJtWAO2pqfluIIg8j9mq3WyAAh0t9fBu6y5CS0hoAAAAApgmGCbGNhgxjJCVP479pLIl4gfFjYoGb9UDwSvdidn26jmOF3gzJcjF8Ub5UIkITGgAYQj9HQI0vHRsKThDzxqZCM/pOWhkEdYp6CARj7Hj2WX/HVeVGNTzPVdAm1W7VnAo8OJ2lh/EuXLfx1yVwD3/SLqgRjCDGTm5Web8L10EAAAADD1B8pfAAgWo0HlODl30L7L3VG7LFW7MUOeRsaWV1p4uUxRkDoXuvcAyi8BF9Z45pm+C1jOfY9dFgD674ljnhv</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:ecommercedbserver1.database.windows.net,1433%3bInitial Catalog=LibraryAPI_db%3bUser Id=migeek%40ecommercedbserver1%3bPassword=password5-</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Students.Repo.StudentDbContext">
+      <Value>Data Source=tcp:ecommercedbserver1.database.windows.net,1433%3bInitial Catalog=LibraryAPI_db%3bUser Id=migeek%40ecommercedbserver1%3bPassword=password5-</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
