@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/ecommercedbserver1/databases/LibraryAPI_db",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/libraryapidbserver2/databases/LibraryAPI_db",
       "type": "mssql.azure",
-      "connectionId": "ConnectionStrings",
-      "secretStore": "AzureAppSettings"
+      "connectionId": "ConnectionStrings"
     }
   }
 }
