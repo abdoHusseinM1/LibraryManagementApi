@@ -35,8 +35,8 @@ namespace StudentAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<StudentDbContext>(s => s.UseInMemoryDatabase("stdDB"));
-            //services.AddDbContext<StudentDbContext>(s => s.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<StudentDbContext>(s => s.UseInMemoryDatabase("stdDB"));
+            services.AddDbContext<StudentDbContext>(s => s.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IStudent, StudentRepo>();
             services.AddScoped<ICategory, CategoryRepo>();
             services.AddScoped<IAuthor, AuthorRepo>();
