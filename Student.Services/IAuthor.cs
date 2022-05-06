@@ -13,7 +13,8 @@ namespace Services
 
         IQueryable<Author> GetAuthors();
 
-        void Save(Author author);
+        int Add(Author author);
+        int EditAuthor(Author author);
         void Delete(int? id);
         int GetLength();
 

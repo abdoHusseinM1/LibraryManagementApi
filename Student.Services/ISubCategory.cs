@@ -15,5 +15,6 @@ namespace Services
         void Delete(int? id);
         void ChangeMainCategory(int? SubCategoryId, int NewMainCategoryId);
         int getlength(int? MainCategoryId);
+        List<SubCategory> GetAll();
     }
 }

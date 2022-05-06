@@ -6,7 +6,6 @@ C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\LibraryAPI.
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\LibraryAPI.runtimeconfig.dev.json
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\LibraryAPI.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\ref\LibraryAPI.dll
-C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\LibraryAPI.pdb
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\EntityFramework.SqlServer.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\EntityFramework.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Humanizer.dll
@@ -51,9 +50,6 @@ C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\runtimes\wi
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Data.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Repos_Implementation.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Repos_Interfaces.dll
-C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Repos_Interfaces.pdb
-C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Data.pdb
-C:\Users\gamma\source\repos\StudentAPI\StudentAPI\bin\Release\net5.0\Repos_Implementation.pdb
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.csproj.AssemblyReference.cache
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.AssemblyInfoInputs.cache
@@ -67,5 +63,4 @@ C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.csproj.CopyComplete
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.dll
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\ref\LibraryAPI.dll
-C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.pdb
 C:\Users\gamma\source\repos\StudentAPI\StudentAPI\obj\Release\net5.0\LibraryAPI.genruntimeconfig.cache

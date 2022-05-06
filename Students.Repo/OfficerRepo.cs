@@ -24,7 +24,7 @@ namespace Repos
 
         public void AcceptOfficer(int? id)
         {
-            _dp.Officers.Find(id).accepted = true;
+            _dp.Officers.Find(id).IsAccepted = true;
             _dp.SaveChanges();
         }
 
@@ -86,6 +86,12 @@ namespace Repos
         {
             _dp.Officers.Find(id).IsAdmin = true;
             _dp.SaveChanges();
+        }
+
+        public Officer GetOfficerByEmail(string email)
+        {
+            var officer = _dp.Officers.Where(c => c.Email == email).FirstOrDefault();
+            return officer;
         }
     }
 }

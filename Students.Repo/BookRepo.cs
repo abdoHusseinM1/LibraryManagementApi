@@ -1,6 +1,7 @@
 ﻿using Data;
 using Services;
 using Students.Repo;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Repos
@@ -21,23 +22,37 @@ namespace Repos
 
             if (book == null)
                 return;
-        
+
             _dp.Remove(book);
             _dp.SaveChanges();
 
         }
 
         // get all books
-        public IQueryable GetAllBooks()
+        public List<Book> GetAllBooks()
         {
-            IQueryable books = _dp.Books;
+            var books = _dp.Books.ToList();
+
             return books;
         }
 
-        // get all books from sub category
-        public IQueryable GetBooksFromSubCategory(int subCategoryId)
+        // get book with id
+        public Book GetBook(int? id)
         {
-            IQueryable books = _dp.Books.Where(s => s.SubCategoryId == subCategoryId);
+            var book = _dp.Books.Find(id);
+            if (book == null)
+            {
+                return null;
+            }
+
+            return book;
+        }
+
+        // get all books from sub category
+        public List<Book> GetBooksFromSubCategory(int subCategoryId)
+        {
+            var books = _dp.Books.Where(s => s.SubCategoryId == subCategoryId).ToList();
+
             return books;
         }
 
@@ -47,31 +62,44 @@ namespace Repos
             return _dp.Books.Count();
         }
 
-        //get book sub-category id
-        public int GetSubCategoryId(int bookId)
+        //get book sub-category 
+        public SubCategory GetSubCategory(int bookId)
         {
-            if(_dp.Books.Find(bookId) == null)
-                return 0;
-           
-            return _dp.Books.Find(bookId).SubCategoryId;                
+            var book = _dp.Books.Find(bookId);
+            if (book != null)
+                return _dp.SubCategories.Find(book.SubCategoryId);
+
+            return null;
         }
 
         //add and update book
-        public void SaveBook(Book book)
+        public int SaveBook(Book book)
         {
-            if(book.Id == 0)
+            var books = _dp.Books.Where(b => book.Title.ToUpper() == b.Title.ToUpper()).ToList();
+            if (books.Count < 1)
             {
                 _dp.Add(book);
                 _dp.SaveChanges();
-            }else
-            {
-                _dp.Books.Find(book.Id).title = book.title;
-                _dp.Books.Find(book.Id).PublishedYear = book.PublishedYear;
-                _dp.Books.Find(book.Id).SubCategoryId = book.SubCategoryId;
-                _dp.Books.Find(book.Id).AvailableQuantity = book.AvailableQuantity;
-
-                _dp.SaveChanges();
+                return 0;
             }
+            return -1;
+        }
+
+        public int EditBook(Book book)
+        {
+            var books = _dp.Books.Where(b => b.Title.ToUpper() == book.Title.ToUpper() &&
+            b.PublishedYear == book.PublishedYear && b.SubCategoryId == book.SubCategoryId).ToList();
+
+            if (books.Count > 0)
+            {
+                return -1;
+            }
+            _dp.Books.Find(book.Id).Title = book.Title;
+            _dp.Books.Find(book.Id).PublishedYear = book.PublishedYear;
+            _dp.Books.Find(book.Id).SubCategoryId = book.SubCategoryId;
+            _dp.Books.Find(book.Id).AvailableQuantity = book.AvailableQuantity;
+            _dp.SaveChanges();
+            return 0;
         }
     }
 }

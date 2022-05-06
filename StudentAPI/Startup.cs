@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Repos;
+using Repos_Implementation;
+using Repos_Interfaces;
 using Services;
 using Students.Repo;
 using Students.Services;
@@ -33,8 +35,8 @@ namespace StudentAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddDbContext<StudentDbContext>(s => s.UseInMemoryDatabase("stdDB"));
-            services.AddDbContext<StudentDbContext>(s => s.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<StudentDbContext>(s => s.UseInMemoryDatabase("stdDB"));
+            //services.AddDbContext<StudentDbContext>(s => s.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IStudent, StudentRepo>();
             services.AddScoped<ICategory, CategoryRepo>();
             services.AddScoped<IAuthor, AuthorRepo>();
@@ -42,6 +44,7 @@ namespace StudentAPI
             services.AddScoped<ISubCategory, SubCategoryRepo>();
             services.AddScoped<IBook, BookRepo>();
             services.AddScoped<IRequest, RequestRepo>();
+            services.AddScoped<ILogin, LoginRepo>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -83,9 +86,10 @@ namespace StudentAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StudentAPI v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StudentAPI v1"));
 
             app.UseHttpsRedirection();
 

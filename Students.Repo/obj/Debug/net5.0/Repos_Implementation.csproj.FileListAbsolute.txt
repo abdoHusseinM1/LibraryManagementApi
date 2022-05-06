@@ -1,5 +1,8 @@
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.deps.json
+C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.runtimeconfig.json
+C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.runtimeconfig.dev.json
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.dll
+C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\ref\Repos_Implementation.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.pdb
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Data.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Interfaces.dll
@@ -14,7 +17,4 @@ C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\Repos_Impl
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\Repos_Implementation.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\ref\Repos_Implementation.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\Repos_Implementation.pdb
-C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.runtimeconfig.json
-C:\Users\gamma\source\repos\StudentAPI\Students.Repo\bin\Debug\net5.0\Repos_Implementation.runtimeconfig.dev.json
 C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\Repos_Implementation.genruntimeconfig.cache
-C:\Users\gamma\source\repos\StudentAPI\Students.Repo\obj\Debug\net5.0\refint\Repos_Implementation.dll

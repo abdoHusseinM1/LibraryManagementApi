@@ -20,15 +20,35 @@ namespace LibraryAPI.Controllers
             _Author = author;
         }
 
+        // add author
         [HttpPost]
-        public IActionResult Save([FromBody]Author NewAuthor)
+        public IActionResult AddAuthor([FromBody]Author NewAuthor)
         {
             if(NewAuthor == null)
             {
                 return BadRequest("The Author Is Null");
+            }else if (_Author.Add(NewAuthor) != 0)
+            {
+                return BadRequest("Author Name already exists");
             }
 
-            _Author.Save(NewAuthor);
+            _Author.Add(NewAuthor);
+            return Ok("Author Saved");
+        }
+
+        //edit author
+        [HttpPut]
+        public IActionResult EditAuthor([FromBody] Author NewAuthor)
+        {
+            if (_Author.GetAuthor(NewAuthor.Id) == null)
+            {
+                return BadRequest("Id isn't exist");
+            }
+            else if (_Author.EditAuthor(NewAuthor) != 0)
+            {
+                return BadRequest("Already exists");
+            }
+            _Author.EditAuthor(NewAuthor);
             return Ok("Author Saved");
         }
 

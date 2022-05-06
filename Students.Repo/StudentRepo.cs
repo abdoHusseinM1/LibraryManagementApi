@@ -19,7 +19,7 @@ namespace Students.Repo
         }
 
         //get all students
-        public IQueryable<Student> GetStudents => _dp.Students;
+        public List<Student> GetStudents => _dp.Students.ToList();
 
         //delete
         public void Delete(int? Id)
@@ -37,7 +37,7 @@ namespace Students.Repo
         }
 
         //save or update 
-        public void Save(Student student)
+        public void AddStudent(Student student)
         {
             if (student.Id == 0)
             {
@@ -45,19 +45,7 @@ namespace Students.Repo
                 _dp.SaveChanges();
 
             }
-            else if (student.Id != 0)
-            {
-                Student _entity = _dp.Students.Find(student.Id);
-                _entity.FullName = student.FullName;
-                _entity.Address = student.Address;
-                _entity.Email = student.Email;
-                _entity.Password = student.Password;
-                _entity.NationalId = student.NationalId;
-                _entity.Phone = student.Phone;
-                _entity.IsBlocked = student.IsBlocked;
-
-                _dp.SaveChanges();
-            }
+            
         }
 
         // get length
@@ -69,14 +57,46 @@ namespace Students.Repo
         // block student
         public void BlockStudent(int? Id)
         {
-            _dp.Students.Find(Id).IsBlocked = true;
-            _dp.SaveChanges();
+            if(_dp.Students.Find(Id) != null)
+            {
+                _dp.Students.Find(Id).IsBlocked = true;
+                _dp.SaveChanges();
+            }
+            
         }
 
         public void AcceptStudent(int? Id)
         {
             _dp.Students.Find(Id).IsAccepted = true;
             _dp.SaveChanges();
+        }
+
+        public void EditStudent(Student student)
+        {
+           
+            Student _entity = _dp.Students.Find(student.Id);
+            _entity.FullName = student.FullName;
+            _entity.Address = student.Address;
+            _entity.Email = student.Email;
+            _entity.Password = student.Password;
+            _entity.NationalId = student.NationalId;
+            _entity.Phone = student.Phone;
+            _entity.IsBlocked = student.IsBlocked;
+            
+            _dp.SaveChanges();
+            
+        }
+
+        public List<Student> GetStudentRequests()
+        {
+            var a = _dp.Students.Where(c => c.IsAccepted == false && c.IsBlocked == false).ToList();
+            return a;
+        }
+
+        public Student GetStudentByEmail(string email)
+        {
+            Student s = _dp.Students.Where(c => c.Email == email).FirstOrDefault();
+            return s;
         }
     }
 }

@@ -10,10 +10,11 @@ namespace Services
     public interface IBook
     {
         public void Delete(int? id);
-        public void SaveBook(Book book);
+        public int SaveBook(Book book);
+        public Book GetBook(int? id);
         public int GetLength();
-        public int GetSubCategoryId(int bookId);
-        public IQueryable GetAllBooks();
-        public IQueryable GetBooksFromSubCategory(int subCategoryId);
+        public SubCategory GetSubCategory(int bookId);
+        public List<Book> GetAllBooks();
+        public List<Book> GetBooksFromSubCategory(int subCategoryId);
     }
 }

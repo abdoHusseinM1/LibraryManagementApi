@@ -19,16 +19,17 @@ namespace Repos
         {
             _dp = dp;
         }
-
-        //get all categories
         
 
         //delete a category
         public void Delete(int? Id)
         {
             Category cat = _dp.Categories.Find(Id);
-            _dp.Remove(cat);
-            _dp.SaveChanges();
+            if(cat != null)
+            {
+                _dp.Remove(cat);
+                _dp.SaveChanges();
+            }
         }
 
         //get a category
@@ -57,13 +58,29 @@ namespace Repos
         //get length
         public int GetLength()
         {
-            IQueryable<Category> categories = _dp.Categories;
-            return categories.Count();
+            int length = _dp.Categories.Count();
+            return length;
         }
 
-        public IQueryable<Category> GetCategories()
+        //get all
+        public List<Category> GetCategories()
         {
-            return _dp.Categories;
+            List<Category> categories = _dp.Categories.ToList();
+            return categories;
         }
+
+        public int GetBooksLength(int Id)
+        {
+            List<SubCategory> subCategories = _dp.SubCategories.Where(s => s.MainCategoryId == Id).ToList();
+            var subsId = new List<int>();
+            for(int i = 0; i<subCategories.Count; i++)
+            {
+                subsId.Add(subCategories[i].MainCategoryId);
+            }
+            var books = _dp.Books.Where(b => subsId.Contains(b.SubCategoryId)).ToList().Count;
+            return books;
+        }
+
+       
     }
 }

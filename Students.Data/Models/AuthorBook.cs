@@ -15,6 +15,5 @@ namespace Data
 
         public Author Author { get; set; }
         public Book Book { get; set; }
-
     }
 }

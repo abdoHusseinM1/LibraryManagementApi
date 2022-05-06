@@ -1,9 +1,7 @@
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\Repos_Interfaces.deps.json
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\Repos_Interfaces.dll
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\ref\Repos_Interfaces.dll
-C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\Repos_Interfaces.pdb
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\Data.dll
-C:\Users\gamma\source\repos\StudentAPI\Student.Services\bin\Release\net5.0\Data.pdb
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.csproj.AssemblyReference.cache
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.AssemblyInfoInputs.cache
@@ -12,4 +10,3 @@ C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.csproj.CopyComplete
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.dll
 C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\ref\Repos_Interfaces.dll
-C:\Users\gamma\source\repos\StudentAPI\Student.Services\obj\Release\net5.0\Repos_Interfaces.pdb

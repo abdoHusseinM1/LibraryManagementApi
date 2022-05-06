@@ -38,38 +38,63 @@ namespace LibraryAPI.Controllers
             if(book == null)
             {
                 return BadRequest("null data sent");
-            }else
-            {
-                _Book.SaveBook(book);
-                return Ok("Saved");
             }
 
+            int result = _Book.SaveBook(book);
+            if(result != 0)
+            {
+                return BadRequest("Already exists");
+            }
+            return Ok("Saved");
+
         }
+
         // 3 - int GetLength();
         [HttpGet("get-length")]
         public IActionResult GetLength()
         {
             return Ok(_Book.GetLength());
         }
+
+
         // 4 - int GetSubCategoryId(int bookId);
-        [HttpGet("get-sub-category")]
-        public IActionResult GetSubCategoryId(int Id)
+        [HttpGet("get-sub-category/{id}")]
+        public IActionResult GetSubCategory(int id)
         {
-            return Ok(_Book.GetSubCategoryId(Id));
+            var subCategory = _Book.GetSubCategory(id);
+            return Ok(subCategory);
         }
 
         // 5 - IQueryable GetAllBooks();
         [HttpGet]
         public IActionResult GetAllBooks()
         {
-            return Ok(_Book.GetAllBooks());
+            List<Book> books = _Book.GetAllBooks();
+            return Ok(books);
         }
 
-        // 6 - IQueryable GetBooksFromSubCategory(int subCategoryId);
+        // 6 - list GetBooksFromSubCategory(int subCategoryId);
         [HttpGet("get-books-from-sub-category-id")]
-        public IActionResult GetBooksFromSubCategory(int Id)
+        public IActionResult GetBooksFromSubCategory(int id)
         {
-            return Ok(_Book.GetBooksFromSubCategory(Id));
+            List<Book> books = _Book.GetBooksFromSubCategory(id);
+
+            return Ok(books);
+
+        }
+
+        // 7 - getBook (int id)
+        [HttpGet("{id}")]
+        public IActionResult GetBook(int? id)
+        {
+            var book = _Book.GetBook(id);
+            if (book == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+
+            return Ok(book);
         }
     }
 }
+

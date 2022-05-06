@@ -1,5 +1,6 @@
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\bin\Debug\net5.0\Data.deps.json
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\bin\Debug\net5.0\Data.dll
+C:\Users\gamma\source\repos\StudentAPI\Students.Data\bin\Debug\net5.0\ref\Data.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\bin\Debug\net5.0\Data.pdb
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\Data.csproj.AssemblyReference.cache
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\Data.GeneratedMSBuildEditorConfig.editorconfig
@@ -9,4 +10,3 @@ C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\Data.cspro
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\Data.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\ref\Data.dll
 C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\Data.pdb
-C:\Users\gamma\source\repos\StudentAPI\Students.Data\obj\Debug\net5.0\refint\Data.dll

@@ -43,29 +43,70 @@ namespace LibraryAPI.Controllers
             return Ok(length);
         }
 
-        // 4 IQueryable GetRequests();
+        // 4 list GetRequests();
         [HttpGet]
         public IActionResult GetRequests()
         {
-            IQueryable queryable = _Request.GetRequests();
-            return Ok(queryable);
-        }
-
-        // 5 List<Request> GetRequestsByStudentNationalId(string NationalId);
-        [HttpGet("get-request-by-national-id")]
-        public IActionResult GetRequestsByStudentNationalId( string NationalId)
-        {
-            List<Request> list = _Request.GetRequestsByStudentNationalId(NationalId);
+            List<Request> list = _Request.GetRequests();
             return Ok(list);
         }
 
-        // 6 void ChangeRequesStatus(int? Id, string NewStatus);
-        [HttpPut("change-request-status/{id}")]
-        public IActionResult ChangeRequestStatus(int Id, string NewStatus)
+        // 5 List<Request> GetRequestsByStudentNationalId(string NationalId);
+        [HttpGet("get-request-by-national-id/{NationalId}")]
+        public IActionResult GetRequestsByStudentNationalId(string NationalId)
         {
-            _Request.ChangeRequesStatus(Id, NewStatus);
-            return Ok("Status Changed Successfully");
+            List<Request> list = _Request.GetRequestsByStudentNationalId(NationalId);
+            if (list.Count == 0)
+                return BadRequest("Un matched");
+
+            return Ok(list);
         }
 
+        // return a book
+
+        [HttpPut("return-book/{id}")]
+        public IActionResult ReturnBook (int id)
+        {
+            if(_Request.getRequest(id) == null)
+            {
+                return BadRequest("invalid id");
+            }
+
+            _Request.ReturnBook(id);
+            return Ok("book returned");
+        }
+
+        [HttpPut("cancel-request/{id}")]
+        public IActionResult CancelRequest(int id)
+        {
+            if(_Request.getRequest(id) == null)
+            {
+                return BadRequest("Invalid id");
+            }
+
+            _Request.CancelRequest(id);
+            return Ok("Request Canceled");
+        }
+
+        //refresh status 
+        [HttpGet("refresh-status")]
+        public IActionResult RefreshStatus()
+        {
+            _Request.RefreshStatus();
+            return Ok("done");
+        }
+
+        //get 1 request
+        [HttpGet("{id}")]
+        public IActionResult GetRequest(int? id)
+        {
+            Request r = _Request.getRequest(id);
+            if (r == null)
+                return BadRequest("invalid id");
+
+            return Ok(r);
+        }
     }
+
+    
 }

@@ -11,9 +11,10 @@ namespace Services
     public interface ICategory
     {
         Category GetCategory(int? Id);
-        IQueryable<Category> GetCategories();
+        List<Category> GetCategories();
         void Save(Category Category);
         void Delete(int? Id);
         int GetLength();
+        int GetBooksLength(int Id);
     }
 }

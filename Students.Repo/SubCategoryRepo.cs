@@ -30,6 +30,11 @@ namespace Repos
             _dp.SaveChanges();
         }
 
+        public List<SubCategory> GetAll()
+        {
+            return _dp.SubCategories.ToList();
+        }
+
         public int getlength(int? MainCategoryId)
         {
             List<SubCategory> s = _dp.SubCategories.Where(s => s.MainCategoryId == MainCategoryId).ToList();

@@ -27,10 +27,8 @@ namespace StudentAPI.Controllers
         {
             if (newCategory == null)
             {
-                return BadRequest();
+                return BadRequest("Null Data");
             }
-
-            //POJO model = await _Student.Save(_student);
 
             _Category.Save(newCategory);
 
@@ -41,7 +39,16 @@ namespace StudentAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult getCategory(int? id)
         {
+            //Dictionary<string, dynamic> d = new Dictionary<string, dynamic>();
+            
             Category category = _Category.GetCategory(id);
+            if(category == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+            //d.Add("category", category);
+            //d.Add("subCategories", 10);
+
             return Ok(category);
         }
 
@@ -49,15 +56,21 @@ namespace StudentAPI.Controllers
         [HttpGet]
         public IActionResult getAllCategories()
         {
-            IQueryable<Category> categories = _Category.GetCategories();
+            List<Category> categories = _Category.GetCategories();
             return Ok(categories);
         }
 
         [HttpDelete("{id}")]
         public IActionResult deleteCategory(int id)
         {
+            Category c = _Category.GetCategory(id);
+            if(c == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+
             _Category.Delete(id);
-            return Ok("Category Deleted Succefully");
+            return Ok("Category Deleted");
         }
 
         [HttpGet("getLength")]
@@ -66,5 +79,14 @@ namespace StudentAPI.Controllers
             int length = _Category.GetLength();
             return Ok(length);
         }
+
+        [HttpGet("get-books-length/{id}")]
+        public IActionResult getBooksLength(int id)
+        {
+            int a = _Category.GetBooksLength(id);
+            return Ok(a);
+        }
+    
+        
     }
 }

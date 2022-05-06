@@ -17,5 +17,6 @@ namespace Services
         void BlockOfficer(int? Id);
         void AcceptOfficer(int? id);
         void MakeAdmin(int? id);
+        Officer GetOfficerByEmail(String email);
     }
 }

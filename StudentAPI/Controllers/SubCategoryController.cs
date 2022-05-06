@@ -25,10 +25,10 @@ namespace LibraryAPI.Controllers
 
         // 1 - GetSubCategories(int? MainCategoryId);
 
-        [HttpGet("getSubCategories")]
-        public IActionResult GetSubCategories(int? MainCategoryId)
+        [HttpGet("getSubCategories/{mainCategoryId}")]
+        public IActionResult GetSubCategories(int? mainCategoryId)
         {
-            IQueryable<SubCategory> s = _SubCategory.GetSubCategories(MainCategoryId);
+            List<SubCategory> s = _SubCategory.GetSubCategories(mainCategoryId).ToList();
             return Ok(s);
         }
 
@@ -55,10 +55,10 @@ namespace LibraryAPI.Controllers
         }
 
         // 4 - ChangeMainCategory(int? SubCategoryId, int NewMainCategoryId);
-        [HttpPut("change-main-category")]
-        public IActionResult ChangeMainCategory(int? SubCategoryId , int NewCategoryId)
+        [HttpPut("change-main-category/{id}")]
+        public IActionResult ChangeMainCategory(int? id ,[FromBody] int NewCategoryId)
         {
-            _SubCategory.ChangeMainCategory(SubCategoryId, NewCategoryId);
+            _SubCategory.ChangeMainCategory(id, NewCategoryId);
             return Ok("Saved");
         }
 
@@ -69,6 +69,7 @@ namespace LibraryAPI.Controllers
             return Ok(_SubCategory.getlength(MainCategoryId));
             
         }
+
         // 6 - getSubCategory
         [HttpGet("{id}")]
         public IActionResult GetSubCategory(int? id)
@@ -77,6 +78,13 @@ namespace LibraryAPI.Controllers
             return Ok(subCategory);
         }
 
+        // get all 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<SubCategory> list = _SubCategory.GetAll();
+            return Ok(list);
+        }
     }
 
 

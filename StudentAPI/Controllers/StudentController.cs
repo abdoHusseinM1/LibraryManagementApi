@@ -22,9 +22,9 @@ namespace StudentAPI.Controllers
             _Student = _dp;
         }
 
-        //save 
+        //add student 
         [HttpPost]
-        public IActionResult Save([FromBody] Student _student)
+        public IActionResult Add([FromBody] Student _student)
         {
             if (_student == null)
             {
@@ -33,7 +33,24 @@ namespace StudentAPI.Controllers
 
             //POJO model = await _Student.Save(_student);
 
-            _Student.Save(_student);
+            _Student.AddStudent(_student);
+
+            return Ok("Saved");
+        }
+
+        //edit student 
+        [HttpPut]
+        public IActionResult EditStudent([FromBody] Student _student)
+        {
+            if (_student == null)
+            {
+                return BadRequest();
+            }else if(_Student.GetStudent(_student.Id) == null)
+            {
+                return BadRequest("Student Isn\'t exist");
+            }
+
+            _Student.EditStudent(_student);
 
             return Ok("Saved");
         }
@@ -50,14 +67,28 @@ namespace StudentAPI.Controllers
         [HttpGet]
         public IActionResult GetStudents()
         {
-            IQueryable<Student> students = _Student.GetStudents;
+            var students = _Student.GetStudents.ToList();
+
             return Ok(students);
+        }
+
+        //get student requests
+        [HttpGet("get-requests")]
+        public IActionResult GetRequests()
+        {
+            var a = _Student.GetStudentRequests();
+            return Ok(a);
         }
 
         // delete student
         [HttpDelete("{Id}")]
         public IActionResult DeleteStudent(int? Id)
         {
+            if(_Student.GetStudent(Id) == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+
             _Student.Delete(Id);
             return Ok("deleted successfully");
         }
@@ -74,6 +105,11 @@ namespace StudentAPI.Controllers
         [HttpPut("block-student/{id}")]
         public IActionResult blockStudent(int? id)
         {
+            if(_Student.GetStudent(id) == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+
             _Student.BlockStudent(id);
             return Ok("Student Blocked");
         }
@@ -82,6 +118,11 @@ namespace StudentAPI.Controllers
         [HttpPut("accept-student/{id}")]
         public IActionResult acceptSudent(int? id)
         {
+            if (_Student.GetStudent(id) == null)
+            {
+                return BadRequest("Invalid Id");
+            }
+
             _Student.AcceptStudent(id);
             return Ok("Student Accepted");
         }
